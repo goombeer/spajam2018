@@ -21,25 +21,41 @@ class PreviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-//        // loadingを表示
-          let loadingGif = UIImage.gif(name: "loading")
-          loadingImg.image = loadingGif
-          loadingImg.loadGif(name: "loading")
-//        // UIImageView 初期化
-//        let imageView = UIImageView(image:loadingGif!)
-//        // 画面の横幅を取得
-//        let screenWidth:CGFloat = view.frame.size.width
-//        let screenHeight:CGFloat = view.frame.size.height
-//
-//        // 画像の中心を画面の中心に設定
-//        imageView.center = CGPoint(x:screenWidth/2, y:screenHeight/2)
-//
-//        // UIImageViewのインスタンスをビューに追加
-//        self.view.addSubview(imageView)
-        
         // apiに投げる
+        let fileContent = url!
+        let apiUrl = "https://e8773789.ngrok.io/data/upload"
+        let headers: HTTPHeaders = [:]
+        
+        let test = try? Data(contentsOf: url!)
+        
+        
+        Alamofire.upload(
+            multipartFormData: { (multipartFormData) in
+                multipartFormData.append(test!,
+                                         withName: "uploadFile",
+                                         fileName: "filename.mov",
+                                         mimeType: "multipart/form-data")},
+            to: apiUrl,
+            headers: headers,
+            encodingCompletion: { encodingResult in
+                // file をエンコードした後のコールバック
+                switch encodingResult {
+                case .success(let upload, _, _):
+                    // upload は request の戻り値の DataRequest を継承したオブジェクトなので
+                    // request と同様にメソッドチェーンしたい項目はこの中で指定できます
+                    upload
+                        .authenticate(user: "user", password: "password")
+                        .uploadProgress(closure: { (progress) in
+                            print("Upload Progress: \(progress.fractionCompleted)")
+                        })
+                        .responseString { response in
+                            debugPrint(response)
+                    }
+                case .failure(let encodingError):
+                    print(encodingError)
+                }
+        }
+        )
         
     }
     
