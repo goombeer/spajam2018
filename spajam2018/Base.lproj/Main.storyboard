@@ -212,6 +212,7 @@
                     <connections>
                         <outlet property="back" destination="XNC-H8-wqU" id="rLX-r8-EBg"/>
                         <outlet property="loadingImg" destination="Iq5-9y-ebO" id="xAB-4R-gui"/>
+                        <segue destination="Or1-E5-GOj" kind="show" identifier="toShare" id="oby-qw-3xV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGy-Wz-JXe" userLabel="First Responder" sceneMemberID="firstResponder"/>

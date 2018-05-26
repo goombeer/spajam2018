@@ -24,6 +24,7 @@ class PreviewViewController: UIViewController {
     
     @IBOutlet var loadingImg: UIImageView!
     @IBOutlet var back: UIImageView!
+    var path: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +61,7 @@ class PreviewViewController: UIViewController {
                                 let jsondata = res.data(using: .utf8)
                                 let fetchresult = try! JSONDecoder().decode(FetchResult.self, from: jsondata!)
                                 print(fetchresult.url)
+                                self.path = URL(string: fetchresult.url)!
                                 self.appearPreview(url: URL(string: fetchresult.url)!)
                             }
                             
@@ -85,7 +87,8 @@ class PreviewViewController: UIViewController {
         back.image = UIImage()
         let path = url
         let videoPlayer = AVPlayer(url: path)
-
+        NotificationCenter.default.addObserver(self, selector: Selector(("playerDidFinishPlaying:")),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: videoPlayer.currentItem)
         // 動画プレイヤーの用意
         let playerController = AVPlayerViewController()
         playerController.player = videoPlayer
@@ -98,5 +101,15 @@ class PreviewViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
+    func playerDidFinishPlaying(note: NSNotification) {
+        self.performSegue(withIdentifier: "toShare", sender: path)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toShare" {
+            let shareViewController = segue.destination as! shareViewController
+            shareViewController.moviePath = path
+        }
+    }
 }

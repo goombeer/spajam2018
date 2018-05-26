@@ -9,7 +9,9 @@
 import UIKit
 
 class shareViewController: UIViewController {
-
+    
+    var moviePath: URL?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,11 +26,8 @@ class shareViewController: UIViewController {
     @IBAction func tap_share(_ sender: Any) {
         // 共有する文言
         let shareText = "かたことキャスト"
-        //共有する動画(仮実装)
-        
-        let shareVideo = UIImage(named: "main_logo")!
-        
-        let activityItems = [shareText, shareVideo] as [Any]
+        //共有する動画
+        let activityItems = [shareText, self.moviePath] as [Any]
 
         let controller = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
         present(controller, animated: true, completion: nil)
