@@ -1,16 +1,19 @@
 PODS:
   - Alamofire (4.7.2)
+  - SwiftGifOrigin (1.6.1)
   - SwiftyCam (2.7.0)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - SwiftGifOrigin (~> 1.6.1)
   - SwiftyCam (from `https://github.com/Awalz/SwiftyCam.git`, branch `Swift4`)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - SwiftGifOrigin
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -25,9 +28,10 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
   SwiftyCam: 7c826b73a5b208677aee29390582c771bf748661
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: b190ec14a3c71f7fc0d4c835a7fe65c7c30da5b1
+PODFILE CHECKSUM: 37ba64be76775fffe1a5ad034a22f03b244e5d64
 
 COCOAPODS: 1.5.3

@@ -10,6 +10,7 @@ target 'spajam2018' do
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SwiftyCam', :git => 'https://github.com/Awalz/SwiftyCam.git', :branch => 'Swift4'
+  pod 'SwiftGifOrigin', '~> 1.6.1'
   target 'spajam2018Tests' do
     inherit! :search_paths
     # Pods for testing

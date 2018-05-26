@@ -20,6 +20,9 @@
 		D461A5DF20B9637E00CFFE58 /* movie-button.png in Resources */ = {isa = PBXBuildFile; fileRef = D461A5DE20B9637E00CFFE58 /* movie-button.png */; };
 		D461A5E120B9854600CFFE58 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D461A5E020B9854600CFFE58 /* AVKit.framework */; };
 		D461A5E320B9859100CFFE58 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461A5E220B9859100CFFE58 /* PreviewViewController.swift */; };
+		D461A5E520B9BF4800CFFE58 /* ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = D461A5E420B9BF4800CFFE58 /* ball.gif */; };
+		D461A5E720B9C6AB00CFFE58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461A5E620B9C6AB00CFFE58 /* HomeViewController.swift */; };
+		D461A5E920B9C6E300CFFE58 /* SwiftGifOrigin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D461A5E820B9C6E300CFFE58 /* SwiftGifOrigin.framework */; };
 		E2FBEB6DD789F387583F9EB3 /* Pods_spajam2018Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446B08418CD97C1684A9B624 /* Pods_spajam2018Tests.framework */; };
 		F2106238CBFB1AC0FC833143 /* Pods_spajam2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838622FFFCF57ADA6A644BFF /* Pods_spajam2018.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +71,9 @@
 		D461A5DE20B9637E00CFFE58 /* movie-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "movie-button.png"; sourceTree = "<group>"; };
 		D461A5E020B9854600CFFE58 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		D461A5E220B9859100CFFE58 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		D461A5E420B9BF4800CFFE58 /* ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ball.gif; sourceTree = "<group>"; };
+		D461A5E620B9C6AB00CFFE58 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D461A5E820B9C6E300CFFE58 /* SwiftGifOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGifOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BF907305B46D1F2EC20D27 /* Pods-spajam2018UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spajam2018UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-spajam2018UITests/Pods-spajam2018UITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D461A5E920B9C6E300CFFE58 /* SwiftGifOrigin.framework in Frameworks */,
 				D461A5E120B9854600CFFE58 /* AVKit.framework in Frameworks */,
 				D461A5D920B959CC00CFFE58 /* AVFoundation.framework in Frameworks */,
 				D461A5D720B9590500CFFE58 /* SwiftyCam.framework in Frameworks */,
@@ -127,10 +134,12 @@
 		164D5B4220B94A4A008F359F /* spajam2018 */ = {
 			isa = PBXGroup;
 			children = (
+				D461A5E620B9C6AB00CFFE58 /* HomeViewController.swift */,
+				164D5B4520B94A4A008F359F /* ViewController.swift */,
 				D461A5E220B9859100CFFE58 /* PreviewViewController.swift */,
+				D461A5E420B9BF4800CFFE58 /* ball.gif */,
 				D461A5DE20B9637E00CFFE58 /* movie-button.png */,
 				164D5B4320B94A4A008F359F /* AppDelegate.swift */,
-				164D5B4520B94A4A008F359F /* ViewController.swift */,
 				164D5B4720B94A4A008F359F /* Main.storyboard */,
 				164D5B4A20B94A4B008F359F /* Assets.xcassets */,
 				164D5B4C20B94A4B008F359F /* LaunchScreen.storyboard */,
@@ -160,6 +169,7 @@
 		348DCE38119831B5B29379CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D461A5E820B9C6E300CFFE58 /* SwiftGifOrigin.framework */,
 				D461A5E020B9854600CFFE58 /* AVKit.framework */,
 				D461A5D820B959CC00CFFE58 /* AVFoundation.framework */,
 				D461A5D620B9590500CFFE58 /* SwiftyCam.framework */,
@@ -293,6 +303,7 @@
 			files = (
 				D461A5DF20B9637E00CFFE58 /* movie-button.png in Resources */,
 				164D5B4E20B94A4B008F359F /* LaunchScreen.storyboard in Resources */,
+				D461A5E520B9BF4800CFFE58 /* ball.gif in Resources */,
 				164D5B4B20B94A4B008F359F /* Assets.xcassets in Resources */,
 				164D5B4920B94A4A008F359F /* Main.storyboard in Resources */,
 			);
@@ -323,12 +334,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-spajam2018/Pods-spajam2018-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyCam/SwiftyCam.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyCam.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -401,6 +414,7 @@
 				D461A5DA20B95A4B00CFFE58 /* ViewController.swift in Sources */,
 				164D5B4420B94A4A008F359F /* AppDelegate.swift in Sources */,
 				D461A5E320B9859100CFFE58 /* PreviewViewController.swift in Sources */,
+				D461A5E720B9C6AB00CFFE58 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

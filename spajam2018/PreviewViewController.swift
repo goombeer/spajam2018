@@ -17,11 +17,18 @@ class PreviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let path = url!
+        let videoPlayer = AVPlayer(url: path)
         
-//        let path = url!
-//        let videoPlayer = AVPlayer(url: URL(fileURLWithPath: path))
-        
-        print(url!)
+        // 動画プレイヤーの用意
+        let playerController = AVPlayerViewController()
+        playerController.player = videoPlayer
+        self.present(playerController, animated: true, completion: {
+            videoPlayer.play()
+        })
     }
     
     override func didReceiveMemoryWarning() {
