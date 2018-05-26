@@ -54,9 +54,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCT-xQ-ePA">
-                                <rect key="frame" x="209" y="333" width="150" height="169"/>
+                                <rect key="frame" x="49" y="351" width="277" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="start_button"/>
+                                <state key="normal" image="yoko_button"/>
                                 <connections>
                                     <action selector="nextBtn:" destination="FFi-V7-8af" eventType="touchUpInside" id="Vke-NJ-cKH"/>
                                 </connections>
@@ -66,13 +66,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ylm-Pm-HGZ">
-                                <rect key="frame" x="17" y="333" width="150" height="169"/>
+                                <rect key="frame" x="49" y="436" width="277" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="start_button"/>
+                                <state key="normal" image="yoko_button"/>
                                 <connections>
                                     <action selector="albumButton:" destination="FFi-V7-8af" eventType="touchUpInside" id="3c8-TN-K3z"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="動画を撮影する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C75-Us-BNe">
+                                <rect key="frame" x="49" y="393" width="277" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.47058823529411764" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="アルバムから選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnB-B9-5Ft">
+                                <rect key="frame" x="49" y="477" width="277" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.47058823529999999" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lx3-aa-338"/>
@@ -182,7 +196,7 @@
         <image name="background_image" width="3872" height="2592"/>
         <image name="button_big" width="1283" height="1443"/>
         <image name="main_logo" width="722" height="122"/>
-        <image name="start_button" width="150" height="169"/>
+        <image name="yoko_button" width="277" height="77"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="r80-rr-XnA"/>
