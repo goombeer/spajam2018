@@ -57,6 +57,9 @@
                                 <rect key="frame" x="134" y="334" width="150" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="start_button"/>
+                                <connections>
+                                    <action selector="nextBtn:" destination="FFi-V7-8af" eventType="touchUpInside" id="Vke-NJ-cKH"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="main_logo" translatesAutoresizingMaskIntoConstraints="NO" id="OEE-nO-7O7">
                                 <rect key="frame" x="17" y="125" width="340" height="60"/>
@@ -67,7 +70,6 @@
                         <viewLayoutGuide key="safeArea" id="lx3-aa-338"/>
                     </view>
                     <connections>
-                        <outlet property="start_button" destination="PCT-xQ-ePA" id="v6P-GN-zpa"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toVideo" id="r80-rr-XnA"/>
                     </connections>
                 </viewController>
@@ -107,6 +109,12 @@
                     <view key="view" contentMode="scaleToFill" id="Ipq-GF-GAh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-wE-8hE">
+                                <rect key="frame" x="79" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Tnn-h1-Y7D"/>
                     </view>
