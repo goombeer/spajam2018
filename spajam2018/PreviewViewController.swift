@@ -11,6 +11,12 @@ import AVKit
 import AVFoundation
 import Alamofire // Alamofireをimport
 import SwiftGifOrigin
+import SwiftyJSON
+
+struct FetchResult: Codable {
+    let result: String
+    let url: String
+}
 
 class PreviewViewController: UIViewController {
 
@@ -32,8 +38,6 @@ class PreviewViewController: UIViewController {
         
         let test = try? Data(contentsOf: url!)
         
-        let semaphore = DispatchSemaphore(value: 0)
-        let queue     = DispatchQueue.global(qos: .utility)
         
         Alamofire.upload(
             multipartFormData: { (multipartFormData) in
@@ -50,19 +54,23 @@ class PreviewViewController: UIViewController {
                     // upload は request の戻り値の DataRequest を継承したオブジェクトなので
                     // request と同様にメソッドチェーンしたい項目はこの中で指定できます
                     upload
-                        .response(queue: queue) { response in
+                        .responseString { response in
                             
-                            self.appearPreview()
+                            if let res = response.result.value {
+                                let jsondata = res.data(using: .utf8)
+                                let fetchresult = try! JSONDecoder().decode(FetchResult.self, from: jsondata!)
+                                print(fetchresult.url)
+                                self.appearPreview(url: URL(string: fetchresult.url)!)
+                            }
                             
-                            semaphore.signal()
                             
-                            semaphore.wait()
+                            
                             
                             
                             
                     }
                     
-                    self.appearPreview()
+                    // self.appearPreview()
                     
                 case .failure(let encodingError):
                     print(encodingError)
@@ -72,10 +80,10 @@ class PreviewViewController: UIViewController {
         
     }
     
-    func appearPreview() {
+    func appearPreview(url: URL) {
 
         back.image = UIImage()
-        let path = url!
+        let path = url
         let videoPlayer = AVPlayer(url: path)
 
         // 動画プレイヤーの用意
