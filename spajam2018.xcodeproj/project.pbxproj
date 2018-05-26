@@ -18,6 +18,8 @@
 		D461A5D920B959CC00CFFE58 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D461A5D820B959CC00CFFE58 /* AVFoundation.framework */; };
 		D461A5DA20B95A4B00CFFE58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164D5B4520B94A4A008F359F /* ViewController.swift */; };
 		D461A5DF20B9637E00CFFE58 /* movie-button.png in Resources */ = {isa = PBXBuildFile; fileRef = D461A5DE20B9637E00CFFE58 /* movie-button.png */; };
+		D461A5E120B9854600CFFE58 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D461A5E020B9854600CFFE58 /* AVKit.framework */; };
+		D461A5E320B9859100CFFE58 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461A5E220B9859100CFFE58 /* PreviewViewController.swift */; };
 		E2FBEB6DD789F387583F9EB3 /* Pods_spajam2018Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446B08418CD97C1684A9B624 /* Pods_spajam2018Tests.framework */; };
 		F2106238CBFB1AC0FC833143 /* Pods_spajam2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838622FFFCF57ADA6A644BFF /* Pods_spajam2018.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,8 @@
 		D461A5D620B9590500CFFE58 /* SwiftyCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D461A5D820B959CC00CFFE58 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D461A5DE20B9637E00CFFE58 /* movie-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "movie-button.png"; sourceTree = "<group>"; };
+		D461A5E020B9854600CFFE58 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		D461A5E220B9859100CFFE58 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		E4BF907305B46D1F2EC20D27 /* Pods-spajam2018UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spajam2018UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-spajam2018UITests/Pods-spajam2018UITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D461A5E120B9854600CFFE58 /* AVKit.framework in Frameworks */,
 				D461A5D920B959CC00CFFE58 /* AVFoundation.framework in Frameworks */,
 				D461A5D720B9590500CFFE58 /* SwiftyCam.framework in Frameworks */,
 				F2106238CBFB1AC0FC833143 /* Pods_spajam2018.framework in Frameworks */,
@@ -122,6 +127,7 @@
 		164D5B4220B94A4A008F359F /* spajam2018 */ = {
 			isa = PBXGroup;
 			children = (
+				D461A5E220B9859100CFFE58 /* PreviewViewController.swift */,
 				D461A5DE20B9637E00CFFE58 /* movie-button.png */,
 				164D5B4320B94A4A008F359F /* AppDelegate.swift */,
 				164D5B4520B94A4A008F359F /* ViewController.swift */,
@@ -154,6 +160,7 @@
 		348DCE38119831B5B29379CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D461A5E020B9854600CFFE58 /* AVKit.framework */,
 				D461A5D820B959CC00CFFE58 /* AVFoundation.framework */,
 				D461A5D620B9590500CFFE58 /* SwiftyCam.framework */,
 				838622FFFCF57ADA6A644BFF /* Pods_spajam2018.framework */,
@@ -393,6 +400,7 @@
 			files = (
 				D461A5DA20B95A4B00CFFE58 /* ViewController.swift in Sources */,
 				164D5B4420B94A4A008F359F /* AppDelegate.swift in Sources */,
+				D461A5E320B9859100CFFE58 /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

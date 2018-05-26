@@ -12,7 +12,7 @@ import SwiftyCam
 class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
     
     var movieFlag = false
-    
+    var pathUrl:URL?
     // caputureボタン
     @IBOutlet var captureButton: UIButton!
     
@@ -21,6 +21,7 @@ class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
         
         // SwiftyCamのdelegate
         cameraDelegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +36,18 @@ class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
         }else {
             stopVideoRecording()
             movieFlag = false
-            captureButton.setTitle("動画を取る", for: .normal)
+//            captureButton.setTitle("動画を取る", for: .normal)
+        }
+    }
+    
+    func goToNextPage(){
+        self.performSegue(withIdentifier: "toPreview", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPreview" {
+            let previewController = segue.destination as! PreviewViewController
+            previewController.url = pathUrl!
         }
     }
     
@@ -48,14 +60,10 @@ class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFinishProcessVideoAt url: URL) {
         // ビデオ撮影を終了し、ビデオの処理が終わった時に、このメソッドが呼ばれます
         // 撮影データは、（url: URL）で受け取ることができます
-        print(url)
-    }
-    
-    // 動画撮影終わり
-    // stopVideoRecording()で、ビデオ撮影を終了した時に、このメソッドが呼ばれます
-    func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFinishRecordingVideo camera: SwiftyCamViewController.CameraSelection) {
         // apiに送る
-        print("ビデオが撮影されました")
+        
+        pathUrl = url
+        goToNextPage()
         
     }
 
