@@ -69,4 +69,7 @@ class HomeViewController: UIViewController,UIImagePickerControllerDelegate,UINav
             let viewController = segue.destination as! ViewController
         }
     }
+    
+    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
+    }
 }
