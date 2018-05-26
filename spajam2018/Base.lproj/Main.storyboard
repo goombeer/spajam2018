@@ -163,7 +163,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iq5-9y-ebO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iq5-9y-ebO">
                                 <rect key="frame" x="67" y="132" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -194,6 +194,7 @@
                         <viewLayoutGuide key="safeArea" id="Tnn-h1-Y7D"/>
                     </view>
                     <connections>
+                        <outlet property="back" destination="XNC-H8-wqU" id="rLX-r8-EBg"/>
                         <outlet property="loadingImg" destination="Iq5-9y-ebO" id="xAB-4R-gui"/>
                     </connections>
                 </viewController>
@@ -210,7 +211,6 @@
         <image name="yoko_button" width="277" height="77"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yTP-mm-1zu"/>
         <segue reference="Lb9-cl-cB4"/>
     </inferredMetricsTieBreakers>
 </document>
