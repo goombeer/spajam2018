@@ -102,6 +102,7 @@
                     </view>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toVideo" id="r80-rr-XnA"/>
+                        <segue destination="6Ht-ai-Bgk" kind="show" identifier="nextPreview" id="XBO-c5-JEM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Poe-C4-bdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -165,7 +166,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBG-Kf-3gv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="DKS-vg-EwW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-172" y="906"/>
+            <point key="canvasLocation" x="652" y="1138"/>
         </scene>
         <!--Preview View Controller-->
         <scene sceneID="zmi-lV-HtN">
@@ -199,7 +200,7 @@
                                     <navigationItem id="qUy-cw-DLt">
                                         <barButtonItem key="leftBarButtonItem" title="もどる" id="q34-rt-ort">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="Lb9-cl-cB4"/>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="nextPreview" id="Lb9-cl-cB4"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -217,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGy-Wz-JXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888.79999999999995" y="33.733133433283363"/>
+            <point key="canvasLocation" x="-887" y="961"/>
         </scene>
     </scenes>
     <resources>
@@ -228,6 +229,7 @@
         <image name="yoko_button" width="277" height="77"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Lb9-cl-cB4"/>
+        <segue reference="XBO-c5-JEM"/>
+        <segue reference="r80-rr-XnA"/>
     </inferredMetricsTieBreakers>
 </document>

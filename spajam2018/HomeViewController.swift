@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
+    var pathUrl: URL?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,24 +53,41 @@ class HomeViewController: UIViewController,UIImagePickerControllerDelegate,UINav
             
         }
         
-        
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentationDirectory, .userDomainMask, true)[0] as String
+        let fileName = "tmpVideo.mp4"
+        let videoPath = documentsPath + fileName
+        print(videoPath)
+        pathUrl = URL(fileURLWithPath: videoPath)
+        goToPreviewPage()
+    }
+    
+    // previewページ
+    func goToPreviewPage(){
+        self.performSegue(withIdentifier: "nextPreview", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "nextPreview" {
+            let previewController = segue.destination as! PreviewViewController
+            previewController.url = pathUrl!
+        }
+    }
+    
+    
+
     
     @IBAction func nextBtn(_ sender: Any) {
         goToNextPage()
     }
     
-    
+    // カメラ起動ページ
     func goToNextPage(){
         self.performSegue(withIdentifier: "toVideo", sender: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toVideo" {
-            let viewController = segue.destination as! ViewController
-        }
-    }
     
     @IBAction func unwindToTop(segue: UIStoryboardSegue) {
     }
