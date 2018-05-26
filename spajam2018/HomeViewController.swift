@@ -10,9 +10,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var start_button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        start_button.layer.cornerRadius = 40
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,4 +24,17 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func start_video(_ sender: Any) {
+        self.goToNextPage()
+    }
+    
+    func goToNextPage(){
+        self.performSegue(withIdentifier: "toVideo", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toVideo" {
+            let viewController = segue.destination as! ViewController
+        }
+    }
 }

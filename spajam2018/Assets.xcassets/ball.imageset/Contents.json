@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "small.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "button.png",
+      "filename" : "ball.gif",
       "scale" : "2x"
     },
     {
