@@ -63,6 +63,7 @@ class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
         // apiに送る
         
         pathUrl = url
+        
         goToNextPage()
         
     }

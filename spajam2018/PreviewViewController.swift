@@ -9,17 +9,27 @@
 import UIKit
 import AVKit
 import AVFoundation
+import Alamofire // Alamofireをimport
 
 class PreviewViewController: UIViewController {
 
     var url: URL?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // loadingを表示
+        
+        // apiに投げる
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        
+        
+        
+        
         let path = url!
         let videoPlayer = AVPlayer(url: path)
         

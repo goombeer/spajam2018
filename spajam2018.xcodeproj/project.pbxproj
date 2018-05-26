@@ -23,6 +23,8 @@
 		D461A5E520B9BF4800CFFE58 /* ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = D461A5E420B9BF4800CFFE58 /* ball.gif */; };
 		D461A5E720B9C6AB00CFFE58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461A5E620B9C6AB00CFFE58 /* HomeViewController.swift */; };
 		D461A5E920B9C6E300CFFE58 /* SwiftGifOrigin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D461A5E820B9C6E300CFFE58 /* SwiftGifOrigin.framework */; };
+		D461A5EB20B9DA5100CFFE58 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D461A5EA20B9DA5100CFFE58 /* Alamofire.framework */; };
+		D461A5ED20B9DA5900CFFE58 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D461A5EC20B9DA5900CFFE58 /* SwiftyJSON.framework */; };
 		E2FBEB6DD789F387583F9EB3 /* Pods_spajam2018Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446B08418CD97C1684A9B624 /* Pods_spajam2018Tests.framework */; };
 		F2106238CBFB1AC0FC833143 /* Pods_spajam2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838622FFFCF57ADA6A644BFF /* Pods_spajam2018.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +76,8 @@
 		D461A5E420B9BF4800CFFE58 /* ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ball.gif; sourceTree = "<group>"; };
 		D461A5E620B9C6AB00CFFE58 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D461A5E820B9C6E300CFFE58 /* SwiftGifOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGifOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D461A5EA20B9DA5100CFFE58 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D461A5EC20B9DA5900CFFE58 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BF907305B46D1F2EC20D27 /* Pods-spajam2018UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spajam2018UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-spajam2018UITests/Pods-spajam2018UITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D461A5ED20B9DA5900CFFE58 /* SwiftyJSON.framework in Frameworks */,
+				D461A5EB20B9DA5100CFFE58 /* Alamofire.framework in Frameworks */,
 				D461A5E920B9C6E300CFFE58 /* SwiftGifOrigin.framework in Frameworks */,
 				D461A5E120B9854600CFFE58 /* AVKit.framework in Frameworks */,
 				D461A5D920B959CC00CFFE58 /* AVFoundation.framework in Frameworks */,
@@ -169,6 +175,8 @@
 		348DCE38119831B5B29379CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D461A5EC20B9DA5900CFFE58 /* SwiftyJSON.framework */,
+				D461A5EA20B9DA5100CFFE58 /* Alamofire.framework */,
 				D461A5E820B9C6E300CFFE58 /* SwiftGifOrigin.framework */,
 				D461A5E020B9854600CFFE58 /* AVKit.framework */,
 				D461A5D820B959CC00CFFE58 /* AVFoundation.framework */,
@@ -590,7 +598,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 24M9ECV3K5;
+				DEVELOPMENT_TEAM = 55V8776BT9;
 				INFOPLIST_FILE = spajam2018/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -612,7 +620,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 24M9ECV3K5;
+				DEVELOPMENT_TEAM = 55V8776BT9;
 				INFOPLIST_FILE = spajam2018/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
