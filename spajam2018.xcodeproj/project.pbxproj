@@ -13,6 +13,7 @@
 		164D5B4E20B94A4B008F359F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164D5B4C20B94A4B008F359F /* LaunchScreen.storyboard */; };
 		164D5B5920B94A4B008F359F /* spajam2018Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164D5B5820B94A4B008F359F /* spajam2018Tests.swift */; };
 		164D5B6420B94A4B008F359F /* spajam2018UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164D5B6320B94A4B008F359F /* spajam2018UITests.swift */; };
+		164D5B7620B9D9C8008F359F /* shareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164D5B7520B9D9C8008F359F /* shareViewController.swift */; };
 		98D8E963135381C8EA22C2EE /* Pods_spajam2018UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7575002507F250FEC8FB9D3A /* Pods_spajam2018UITests.framework */; };
 		D461A5D720B9590500CFFE58 /* SwiftyCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D461A5D620B9590500CFFE58 /* SwiftyCam.framework */; };
 		D461A5D920B959CC00CFFE58 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D461A5D820B959CC00CFFE58 /* AVFoundation.framework */; };
@@ -59,6 +60,7 @@
 		164D5B5F20B94A4B008F359F /* spajam2018UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spajam2018UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		164D5B6320B94A4B008F359F /* spajam2018UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spajam2018UITests.swift; sourceTree = "<group>"; };
 		164D5B6520B94A4B008F359F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		164D5B7520B9D9C8008F359F /* shareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shareViewController.swift; sourceTree = "<group>"; };
 		1D94874D539F26337A96D57B /* Pods-spajam2018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spajam2018.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spajam2018/Pods-spajam2018.debug.xcconfig"; sourceTree = "<group>"; };
 		1F2C879771BECCF3670EFA55 /* Pods-spajam2018UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spajam2018UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spajam2018UITests/Pods-spajam2018UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		446B08418CD97C1684A9B624 /* Pods_spajam2018Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spajam2018Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 				D461A5DE20B9637E00CFFE58 /* movie-button.png */,
 				164D5B4320B94A4A008F359F /* AppDelegate.swift */,
 				164D5B4720B94A4A008F359F /* Main.storyboard */,
+				164D5B7520B9D9C8008F359F /* shareViewController.swift */,
 				164D5B4A20B94A4B008F359F /* Assets.xcassets */,
 				164D5B4C20B94A4B008F359F /* LaunchScreen.storyboard */,
 				164D5B4F20B94A4B008F359F /* Info.plist */,
@@ -414,6 +417,7 @@
 				D461A5DA20B95A4B00CFFE58 /* ViewController.swift in Sources */,
 				164D5B4420B94A4A008F359F /* AppDelegate.swift in Sources */,
 				D461A5E320B9859100CFFE58 /* PreviewViewController.swift in Sources */,
+				164D5B7620B9D9C8008F359F /* shareViewController.swift in Sources */,
 				D461A5E720B9C6AB00CFFE58 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

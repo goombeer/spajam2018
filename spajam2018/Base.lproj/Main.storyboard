@@ -75,6 +75,31 @@
             </objects>
             <point key="canvasLocation" x="-751.20000000000005" y="33.733133433283363"/>
         </scene>
+        <!--Share View Controller-->
+        <scene sceneID="iI3-4A-uD0">
+            <objects>
+                <viewController id="Or1-E5-GOj" customClass="shareViewController" customModule="spajam2018" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5To-H8-PVp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7T-hL-1ub">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="シェア"/>
+                                <connections>
+                                    <action selector="tap_share:" destination="Or1-E5-GOj" eventType="touchUpInside" id="S79-At-1XC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bRb-hJ-EFb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBG-Kf-3gv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-723" y="792"/>
+        </scene>
         <!--Preview View Controller-->
         <scene sceneID="zmi-lV-HtN">
             <objects>
