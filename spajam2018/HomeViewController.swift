@@ -8,17 +8,51 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
+    
+    // 毎時起動させる機能
+    override func viewDidAppear(_ animated: Bool) {
+        // カメラロール表示
+        super.viewDidAppear(animated)
+        
+        let c = UIImagePickerController()
+        // 動画選択も可能にする
+        c.mediaTypes = ["public.image", "public.movie"]
+        present(c, animated: true)
+    }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // カメラロール
+    @IBAction func albumButton(_ sender: Any) {
+        
+        let sourceTyoe:UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.photoLibrary
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            
+            let cameraPicker = UIImagePickerController()
+            cameraPicker.sourceType = sourceTyoe
+            cameraPicker.delegate = self
+            self.present(cameraPicker, animated: true, completion: nil)
+            
+        }else{
+            print("Error")
+            
+        }
+        
+        
     }
     
     
