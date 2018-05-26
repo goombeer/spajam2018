@@ -18,10 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QBM-f4-gCP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="bgT-Jl-g3N">
+                                        <barButtonItem key="leftBarButtonItem" title="もどる" id="ODj-2Z-dGJ"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urJ-Vj-cdw">
-                                <rect key="frame" x="141" y="582" width="92" height="34"/>
+                                <rect key="frame" x="147" y="567" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="動画を取る">
+                                <state key="normal" image="recordingButton">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -197,9 +206,11 @@
         <image name="background_image" width="3872" height="2592"/>
         <image name="button_big" width="1283" height="1443"/>
         <image name="main_logo" width="722" height="122"/>
+        <image name="recordingButton" width="162" height="162"/>
         <image name="yoko_button" width="277" height="77"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="yTP-mm-1zu"/>
         <segue reference="Lb9-cl-cB4"/>
     </inferredMetricsTieBreakers>
 </document>
