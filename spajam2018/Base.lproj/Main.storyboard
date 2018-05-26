@@ -132,6 +132,20 @@
                                 <rect key="frame" x="79" y="269" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9T-CU-UsZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="qUy-cw-DLt">
+                                        <barButtonItem key="leftBarButtonItem" title="もどる" id="q34-rt-ort">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" id="Lb9-cl-cB4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Tnn-h1-Y7D"/>
@@ -148,4 +162,7 @@
         <image name="main_logo" width="722" height="122"/>
         <image name="start_button" width="150" height="169"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Lb9-cl-cB4"/>
+    </inferredMetricsTieBreakers>
 </document>
