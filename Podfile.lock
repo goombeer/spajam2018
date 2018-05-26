@@ -1,9 +1,11 @@
 PODS:
   - Alamofire (4.7.2)
+  - SwiftyCam (2.7.0)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - SwiftyCam (from `https://github.com/Awalz/SwiftyCam.git`, branch `Swift4`)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
@@ -11,10 +13,21 @@ SPEC REPOS:
     - Alamofire
     - SwiftyJSON
 
+EXTERNAL SOURCES:
+  SwiftyCam:
+    :branch: Swift4
+    :git: https://github.com/Awalz/SwiftyCam.git
+
+CHECKOUT OPTIONS:
+  SwiftyCam:
+    :commit: 85d713d643159cda72db2f3e230777af50cded94
+    :git: https://github.com/Awalz/SwiftyCam.git
+
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  SwiftyCam: 7c826b73a5b208677aee29390582c771bf748661
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 43bf052e157986df1aedea48ae9678ba7cf3ca1f
+PODFILE CHECKSUM: b190ec14a3c71f7fc0d4c835a7fe65c7c30da5b1
 
 COCOAPODS: 1.5.3
