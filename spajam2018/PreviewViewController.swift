@@ -87,8 +87,8 @@ class PreviewViewController: UIViewController {
         back.image = UIImage()
         let path = url
         let videoPlayer = AVPlayer(url: path)
-        NotificationCenter.default.addObserver(self, selector: Selector(("playerDidFinishPlaying:")),
-                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: videoPlayer.currentItem)
+        NotificationCenter.default.addObserver(self, selector: #selector(PreviewViewController.playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+
         // 動画プレイヤーの用意
         let playerController = AVPlayerViewController()
         playerController.player = videoPlayer
@@ -102,7 +102,7 @@ class PreviewViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func playerDidFinishPlaying(note: NSNotification) {
+    @objc func playerDidFinishPlaying(note: NSNotification) {
         self.performSegue(withIdentifier: "toShare", sender: path)
     }
     
