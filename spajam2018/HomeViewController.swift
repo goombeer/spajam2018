@@ -66,6 +66,7 @@ class HomeViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     
     // previewページ
     func goToPreviewPage(){
+        print(true)
         self.performSegue(withIdentifier: "nextPreview", sender: nil)
     }
     
