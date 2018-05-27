@@ -15,6 +15,7 @@ class HomeViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // Do any additional setup after loading the view.
     }
     
@@ -36,6 +37,7 @@ class HomeViewController: UIViewController,UIImagePickerControllerDelegate,UINav
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             
             let cameraPicker = UIImagePickerController()
+            cameraPicker.delegate = self
             
             // 動画選択も可能にする
             cameraPicker.mediaTypes = ["public.image", "public.movie"]
@@ -62,15 +64,18 @@ class HomeViewController: UIViewController,UIImagePickerControllerDelegate,UINav
         print(videoPath)
         pathUrl = URL(fileURLWithPath: videoPath)
         goToPreviewPage()
+        picker.dismiss(animated: true, completion: nil)
     }
     
     // previewページ
     func goToPreviewPage(){
         print(true)
         self.performSegue(withIdentifier: "nextPreview", sender: nil)
+        print("とおっている")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "nextPreview" {
             let previewController = segue.destination as! PreviewViewController
             previewController.url = pathUrl!

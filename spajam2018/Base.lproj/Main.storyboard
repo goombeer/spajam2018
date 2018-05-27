@@ -102,7 +102,7 @@
                     </view>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toVideo" id="r80-rr-XnA"/>
-                        <segue destination="6Ht-ai-Bgk" kind="show" identifier="nextPreview" id="XBO-c5-JEM"/>
+                        <segue destination="6Ht-ai-Bgk" kind="show" identifier="nextPreview" id="EeP-QD-n7p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Poe-C4-bdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -229,7 +229,7 @@
         <image name="yoko_button" width="277" height="77"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XBO-c5-JEM"/>
+        <segue reference="EeP-QD-n7p"/>
         <segue reference="r80-rr-XnA"/>
     </inferredMetricsTieBreakers>
 </document>
