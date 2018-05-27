@@ -18,7 +18,7 @@ struct FetchResult: Codable {
     let url: String
 }
 
-class PreviewViewController: UIViewController {
+class PreviewViewController: UIViewController, AVPlayerViewControllerDelegate {
 
     var url: URL?
     
@@ -87,20 +87,25 @@ class PreviewViewController: UIViewController {
         back.image = UIImage()
         let path = url
         let videoPlayer = AVPlayer(url: path)
-        NotificationCenter.default.addObserver(self, selector: #selector(PreviewViewController.playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
 
         // 動画プレイヤーの用意
         let playerController = AVPlayerViewController()
+        NotificationCenter.default.addObserver(self, selector: #selector(PreviewViewController.playerDidFinishPlaying),name:NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: videoPlayer.currentItem)
+
+        playerController.delegate = self
         playerController.player = videoPlayer
+        
         self.present(playerController, animated: true, completion: {
             videoPlayer.play()
         })
+        
     }
 
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
     @objc func playerDidFinishPlaying(note: NSNotification) {
         self.performSegue(withIdentifier: "toShare", sender: path)
